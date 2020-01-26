@@ -1,7 +1,15 @@
+* {
+    color: #37474f;
+    /*font-family: 'Kanit', sans-serif;*/
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    background-image: url(/img/light-grey-terrazzo-compressor.png);
+}
+
 .pagetitle {
-    font-family: 'Kanit', sans-serif;
-    font-size: 19px;
-    color: #000000;
+    font-size: 2rem;
     text-align: center;
     padding: 0px;
 }
@@ -12,23 +20,92 @@
 }
 
 .searchBar {
+    width: 50%;
+    font-size: 1rem;
+    color: #546e7a;
     margin: 20px;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
+    background-color: #eeeeee;
     align-items: center;
-    width: 500px;
-    height: 50px;
-    font-size: 1.5em;
-    font-family: 'Lato', sans-serif;
-    background-color: #FFFCFD;
-    border: none;
     border-bottom: 0.1em solid #AFAFAF;
+    border-radius: 2px;
+    padding: 10px;
+    border-style: none;
 }
 
 .button {
-    background-color: #FFA000;
-    padding: 12px 24px;
-    font-size: 19px;
-    color: white;
-    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    color: #546e7a;
+    background-color: #eeeeee;
+    border-radius: 2px;
+    cursor: pointer;
+    padding-bottom: 5px;
+    transition: all linear 0.5s;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    margin-right: 1rem;
+}
+
+.beer {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 0.5rem;
+    margin-left: 1rem;
+    margin-right: 0.25rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: justify;
+}
+
+.beer h3 {
+    text-align: center;
+}
+
+.beer img {
+    height: 12rem;
+    display: block;
+    margin: auto;
+    cursor: pointer;
+}
+
+span {
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    text-align: end;
+}
+
+button {
+    cursor: pointer;
+}
+
+@media (max-width: 567px) {
+    .card-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .button {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (min-width: 567px) and (max-width: 768px) {
+    .card-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .button {
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .card-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
 }
